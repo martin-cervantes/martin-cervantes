@@ -5,12 +5,13 @@
         <meta property="og:title" content="My Portfolio" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="This project is to create a super portfolio and show the great projects that I have done so far because what is coming will be even better since I like to keep learning and improving my skills, I am always thinking about doing new things and moving forward." />
-        <meta property="og:image" content="" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/mcervantes71/mcervantes71/develop/Screenshot.png" />
         <meta property="og:url" content="https://mcervantes71.github.io/mcervantes71/index.html" />
 	      <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
         <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap' rel='stylesheet'>
         <link rel='icon' type='image/x-icon' href='img/Profile_Photo.png'>
+        <link rel="stylesheet" href="css/bootstrap.css">
         <link rel='stylesheet' href='css/font-awesome.min.css'>
         <link rel='stylesheet' href='css/style.css'>
 
@@ -18,65 +19,171 @@
     </head>
 
     <body>
-        <main class='bg_dark'>
-            <h1 class='name'>Martin Cervantes</h1>
+        <nav class="navbar navbar-expand-lg navbar-white bg-white d-flex justify-content-between sticky-top">
+            <div class='icons d-flex justify-content-between'>
+                <a href='mailto:cervantes.martine@gmail.com' title='Email: cervantes.martine@gmail.com'><i class='fa fa-envelope d-flex justify-content-center align-items-center bg-primary rounded-circle'></i></a>
+                <a href='https://www.linkedin.com/in/cervantesmartin/' title='LinkedIn: cervantesmartin'><i class='fa fa-linkedin d-flex justify-content-center align-items-center bg-primary rounded-circle'></i></a>
+                <a href='https://github.com/mcervantes71' title='Github: mcervantes71'><i class='fa fa-github d-flex justify-content-center align-items-center bg-primary rounded-circle'></i></a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-uppercase font-weight-bold" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="home nav-item py-2 border border-primary rounded active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+
+                    <li class="projects nav-item py-2">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+
+                    <li class="contact nav-item py-2">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class='home bg_dark d-flex flex-column align-items-center justify-content-end'>
+            <h1 class='name font-bold display-3 mt-5'>Martin Cervantes</h1>
 
             <p class='job'>Full Stack Developer</p>
 
-            <div class='icons'>
-                <a href='mailto:cervantes.martine@gmail.com' title='email'><i class='fa fa-envelope'></i></a>
-                <a href='https://www.linkedin.com/in/cervantesmartin/' title='LinkedIn'><i class='fa fa-linkedin'></i></a>
-                <a href='https://github.com/mcervantes71' title='Github'><i class='fa fa-github'></i></a>
-            </div>
 
-            <div class='skills'>
+
+            <div class='skills d-flex justify-content-around'>
                 <img class='skill' src='img/html5.png' alt='HTML5' title='HTML5'>
                 <img class='skill' src='img/css3.png' alt='CSS3' title='CSS3'>
                 <img class='skill' src='img/javascript.png' alt='Javascript' title='Javascript'>
-                <img class='skill' src='img/bootstrap.png' alt='Bootstrap' title='Bootstrap'>
-                <img class='skill' src='img/jquery.png' alt='jQuery' title='jQuery'>
-                <img class='skill' src='img/ruby.png' alt='Ruby' title='Ruby'>
+                <img class='skill rounded' src='img/bootstrap.png' alt='Bootstrap' title='Bootstrap'>
+                <img class='skill rounded-circle' src='img/react.png' alt='React' title='React'>
+                <img class='skill rounded' src='img/ruby.png' alt='Ruby' title='Ruby'>
                 <img class='skill' src='img/rails.png' alt='Rails' title='Rails'>
                 <img class='skill' src='img/heroku.png' alt='Heroku' title='Heroku'>
-                <img class='skill' src='img/git.png' alt='Git' title='Git'>
+                <img class='skill rounded' src='img/git.png' alt='Git' title='Git'>
                 <img class='skill' src='img/github.png' alt='Github' title='Github'>
             </div>
         </main>
 
-        <section class=''>
-            <div class='bg_black'>
-                <div class='container'>
-                    <div class='repos'>
-                        <a target='_blank' href='https://lifestyle-articles-project.herokuapp.com/'><img src='img/Lifestyle_Articles.png' alt='LiFEsTyle' title='LiFEsTyle' /></a>
-                        <a href='https://github.com/mcervantes71/Lifestyle_Articles' title='Github repo'><i class='fa fa-github'></i></a>
+        <section id="projects" class='projects'>
+            <div class='bg_black position-relative'>
+                <div class='container d-flex justify-content-around position-absolute'>
+                    <div class='repos d-flex flex-column align-items-center'>
+                        <div class="project position-relative" style="background-image: url(img/Lifestyle_Articles.png)">
+                            <div class="pos position-absolute">
+                                <div class="project-title">
+                                    <a target='_blank' href='https://lifestyle-articles-project.herokuapp.com/'>LiFEsTyle</a>
+                                </div>
+
+                                <div class="project-info text-dark font-weight-bolder">
+                                    <p>
+                                        It’s a real-world-like project, built with business specifications using the Ruby on Rails framework. Showing how to fully craft site's backend using the Model-View-Controller design pattern.
+                                    </p>
+                                    <p class="pt-2">
+                                        Build with: <span class=" text-info font-italic">HTML5, CSS3 and Ruby on Rails.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <a target='_blank' href='https://github.com/mcervantes71/Lifestyle_Articles' title='Github repo'><i class='fa fa-github d-flex justify-content-center align-items-center bg-primary rounded-circle'></i></a>
+                            <a target='_blank' href='https://lifestyle-articles-project.herokuapp.com/'  title='LIve Demo' ><i class="fa fa-play d-flex justify-content-center align-items-center bg-primary rounded-circle"></i></a>
+                        </div>
+
                     </div>
 
-                    <div class='repos'>
-                        <a target='_blank' href='https://mcervantes71.github.io/NYT_Clone/index.html'><img src='img/New_York_Times.png' alt='NYT Article Clone' title='NYT Article Clone' /></a>
-                        <a href='https://github.com/mcervantes71/NYT_Clone' title='Github repo'><i class='fa fa-github'></i></a>
+                    <div class='repos d-flex flex-column align-items-center'>
+                        <div class="project position-relative" style="background-image: url(img/Pokedex.png)">
+                            <div class="pos position-absolute">
+                                <div class="project-title">
+                                    <a target='_blank' href='https://pokedex-react-project1.netlify.app/'>Pokedex</a>
+                                </div>
+
+                                <div class="project-info text-dark font-weight-bolder">
+                                    <p>
+                                        This project is a single-page application (SPA) is a browsable list of Pokemon that you can filter by type and access to the details of each one.
+                                    </p>
+                                    <p class="pt-2">
+                                        Build with: <span class=" text-info font-italic">React and Redux.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <a target='_blank' href='https://github.com/mcervantes71/Pokedex' title='Github repo'><i class='fa fa-github d-flex justify-content-center align-items-center bg-primary rounded-circle'></i></a>
+                            <a target='_blank' href='https://pokedex-react-project1.netlify.app/'  title='LIve Demo' ><i class="fa fa-play d-flex justify-content-center align-items-center bg-primary rounded-circle"></i></a>
+                        </div>
                     </div>
 
-                    <div class='repos'>
-                        <a target='_blank' href='https://mcervantes71.github.io/Newsweek_Clone/index.html'><img src='img/Newsweek.png' alt='Newsweek Main Page Clone' title='Newsweek Main Page Clone'></a>
-                        <a href='https://github.com/mcervantes71/Newsweek_Clone' title='Github repo'><i class='fa fa-github'></i></a>
+                    <div class='repos d-flex flex-column align-items-center'>
+                        <div class="project position-relative" style="background-image: url(img/Newsweek.png)">
+                            <div class="pos position-absolute">
+                                <div class="project-title">
+                                    <a target='_blank' href='https://mcervantes71.github.io/Newsweek_Clone/index.html'>Newsweek Clone</a>
+                                </div>
+
+                                <div class="project-info text-dark font-weight-bolder">
+                                    <p>
+                                      This project is about mastering front-end design and development by using a responsive design framework and create a websites that look great on any device.
+                                    </p>
+                                    <p class="pt-2">
+                                        Build with: <span class=" text-info font-italic">HTML5, CSS3 and Bootstrap4</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <a target='_blank' href='https://github.com/mcervantes71/Newsweek_Clone' title='Github repo'><i class='fa fa-github d-flex justify-content-center align-items-center bg-primary rounded-circle'></i></a>
+                            <a target='_blank' href='https://mcervantes71.github.io/Newsweek_Clone/index.html'  title='LIve Demo' ><i class="fa fa-play d-flex justify-content-center align-items-center bg-primary rounded-circle"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class='bg_blue'></div>
+            <div class='bg_blue position-relative'></div>
         </section>
 
-        <footer class='main_footer bg_dark'>
-            <div class='icons'>
-                <a href='mailto:cervantes.martine@gmail.com' title='email'><i class='fa fa-envelope'></i></a>
-                <a href='https://www.linkedin.com/in/cervantesmartin/' title='LinkedIn'><i class='fa fa-linkedin'></i></a>
-                <a href='https://github.com/mcervantes71' title='Github'><i class='fa fa-github'></i></a>
+        <section id="contact" class="bg_dark contact">
+            <h1 class="display-4 text-center mt-3 p-3 pt-5">Get in touch</h1>
+
+            <form class="mx-auto mb-3 pb-5" action="mailto:cervantes.martine@gmail.com" method="POST">
+                <div class="form-group">
+                    <label for="name" class="pb-2 pt-3">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="pb-2 pt-3">Email address:</label>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="pb-2 pt-3">Message:</label>
+                    <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </section>
+
+        <footer class='main_footer bg_dark d-flex flex-column justify-content-around align-items-center'>
+            <div class='icons d-flex justify-content-between'>
+                <a href='mailto:cervantes.martine@gmail.com' title='Email'><i class='fa fa-envelope d-flex justify-content-center align-items-center bg-primary rounded-circle'></i></a>
+                <a href='https://www.linkedin.com/in/cervantesmartin/' title='LinkedIn'><i class='fa fa-linkedin d-flex justify-content-center align-items-center bg-primary rounded-circle'></i></a>
+                <a href='https://github.com/mcervantes71' title='Github'><i class='fa fa-github d-flex justify-content-center align-items-center bg-primary rounded-circle'></i></a>
             </div>
 
-            <p class=''>Copyleft <span class='copyleft'>&copy;</span> 2020 Martin Cervantes</p>
+            <p class='pb-4'>Copyleft <span class='copyleft'>&copy;</span> 2020 Martin Cervantes</p>
         </footer>
 
         <script src='js/jquery.min.js'></script>
+        <script src="js/bootstrap.min.js"></script>
         <script src='js/script.js'></script>
     </body>
 </html>
