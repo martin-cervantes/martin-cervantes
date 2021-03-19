@@ -10,6 +10,7 @@ This project is to create a super portfolio and show the great projects that I h
     - CSS3
     - Font-Awesome
     - Bootstrap4
+    - jQuery
 
 ## :mag: Live Demo
 
